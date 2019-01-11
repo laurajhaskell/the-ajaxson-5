@@ -11,17 +11,30 @@
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
+<style>
+    section {
+        margin:40px;
+    }
+    figure {
+        margin: 40px;
+        align-content: center;
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
 <body>
-    <div class="jumbotron text-center">
+    <header class="jumbotron text-center">
         <h1>The AJAXson 5</h1>
-    </div>
+    </header>
 
     <form id="form-gif-request" class="inline">
-        <div class="form-group">
+        <section class="form-group">
             <label for="question">What kind of Jackson 5 related gif do you want?</label>
             <input id="question" name="tag" type="text" class="form-control" placeholder="e.g. 'dance'"/>
-        </div>
-        <div class="form-group">
+        </section>
+
+        <section class="form-group">
             <label for="captcha">Prove you are not a robot by answering this riddle:</label>
             <div class="input-group mb-3">
                 <input id="captcha" type="text" class="form-control" />
@@ -29,14 +42,20 @@
                     <span class="input-group-text">Jacksons are better than 1.</span>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
+        </section>
+
+        <section class="form-group">
             <button type="submit" class="btn btn-primary">Get my gif!</button>
-        </div>
+        </section>
     </form>
 
-    <img id="gif" src="http://media1.giphy.com/media/dc6zaTOxFJmzC/giphy.gif" hidden="true"/>
-    <p id="feedback" hidden="true`" class="text-danger"></p>
+    <figure>
+        <img id="gif" src="http://media1.giphy.com/media/dc6zaTOxFJmzC/giphy.gif" hidden="true"/>
+    </figure>
+    
+    <section>
+        <p id="feedback" hidden="true`" class="text-danger"></p>
+    </section>
 
 </body>
 </html>
